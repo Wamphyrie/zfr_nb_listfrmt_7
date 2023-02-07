@@ -14,15 +14,16 @@
 		busyIndicatorDelay="{objectView>/delay}">
 
 		<semantic:content>
-			<ObjectHeader
-				id="objectHeader"
-				title="{Firstname}"
-				number="{
-							path: 'Salary',
-							formatter: '.formatter.numberUnit'
-				}"
-				numberUnit="{Country}">
-			</ObjectHeader>
+			<List  items = "{/WorkerSet}"  growing = "true"  growingThreshold = "10" >
+				<StandardListItem	title = "{Userid}"
+									description = "{Firstname} {Lastname}"
+									info = "{Emailid}"
+									counter = "{Salary}"
+									icon = "{path:'Salary', formatter:'.formatter.SALFF'}" 
+									infoState = "{path:'Salary', formatter:'.formatter.INFOSTATFF'}"
+									
+									/>
+			</List>
  		</semantic:content>
 
 		<semantic:sendEmailAction>

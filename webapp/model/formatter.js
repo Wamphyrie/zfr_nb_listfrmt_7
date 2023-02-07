@@ -15,6 +15,16 @@ sap.ui.define([
 					return "";
 				}
 				return parseFloat(sValue).toFixed(2);
+			},
+			
+			SALFF : function (Salary)
+			{
+				return (Salary > 80000) ? "/purple.jpg" : "/orange.jpg";
+			},
+			
+			INFOSTATFF : function (Salary)
+			{
+				return  (Salary > 80000) ? "Success" : "Error";
 			}
 
 		};
